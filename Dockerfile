@@ -7,3 +7,5 @@ RUN apk add git \
 
 RUN tarantoolctl rocks install luatest
 RUN ln -s /opt/tarantool/.rocks/bin/luatest /bin/luatest
+RUN tarantoolctl rocks install luacov
+RUN ln -s /opt/tarantool/.rocks/bin/luacov /bin/luacov
