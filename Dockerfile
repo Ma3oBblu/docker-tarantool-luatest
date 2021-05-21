@@ -1,4 +1,4 @@
-FROM tarantool/tarantool:2.6.2
+FROM tarantool/tarantool:2.6.3
 
 RUN apk add git \
    cmake \
