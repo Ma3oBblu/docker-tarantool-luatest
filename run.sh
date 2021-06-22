@@ -1,12 +1,12 @@
 #!/bin/sh -e
 
 build() {
-  docker build -t ma3obblu/tarantool-luatest:2.6.3 .
+  docker build -t ma3obblu/tarantool-luatest:2.7.2 .
 }
 
 push() {
-  docker tag ma3obblu/tarantool-luatest:2.6.3 ma3obblu/tarantool-luatest:2.6.3
-  docker push ma3obblu/tarantool-luatest:2.6.3
+  docker tag ma3obblu/tarantool-luatest:2.7.2 ma3obblu/tarantool-luatest:2.7.2
+  docker push ma3obblu/tarantool-luatest:2.7.2
 }
 
 build_and_push() {
