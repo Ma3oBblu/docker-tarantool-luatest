@@ -1,4 +1,4 @@
-# Docker образ tarantool с luatest и luacov + luacov-multiple
+# Docker образ tarantool с пакетами для тестирования и сбора метрик
 
 За основу используется [официальный докер образ tarantool 2.7.2](https://hub.docker.com/r/tarantool/tarantool/)
 
@@ -8,6 +8,8 @@
 * [luacov](https://github.com/keplerproject/luacov) для анализа покрытия тестами
 
 * [luacov-multiple](https://github.com/to-kr/luacov-multiple) для вывода html отчета по покрытию
+
+* [metrics](https://github.com/tarantool/metrics) для сбора и предоставления метрик приложения
 
 Для сборки локального образа используйте команду:
 `docker build -t ma3obblu/tarantool-luatest:2.7.2 .`
