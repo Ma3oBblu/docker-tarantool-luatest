@@ -1,22 +1,22 @@
-# Docker образ tarantool с пакетами для тестирования и сбора метрик
+# Docker image for tarantool with luatest, luacov and metrics
 
-За основу используется [официальный докер образ tarantool 2.8.2](https://hub.docker.com/r/tarantool/tarantool/)
+Used original image from tarantool repo [official tarantool docker image 2.8.2](https://hub.docker.com/r/tarantool/tarantool/)
 
-Добавлены библиотеки:
-* [luatest](https://github.com/tarantool/luatest) для тестирования
+In image added useful modules:
+* [luatest](https://github.com/tarantool/luatest) for testing
   
-* [luacov](https://github.com/keplerproject/luacov) для анализа покрытия тестами
+* [luacov](https://github.com/keplerproject/luacov) to analyze test coverage
 
-* [luacov-multiple](https://github.com/to-kr/luacov-multiple) для вывода html отчета по покрытию
+* [luacov-multiple](https://github.com/to-kr/luacov-multiple) for html report for test coverage
 
-* [metrics](https://github.com/tarantool/metrics) для сбора и предоставления метрик приложения
+* [metrics](https://github.com/tarantool/metrics) for metrics
 
-Для сборки локального образа используйте команду:
+Use command to build local image:
 `docker build -t ma3obblu/tarantool-luatest:2.8.2 .`
 
-## Примеры использования
+## Examples
 
-### Запуск тестов
+### Run tests
 ```bash
 unit() {
     echo "run unit tests"
@@ -24,7 +24,7 @@ unit() {
 }
 ```
 
-### Анализ покрытия
+### Run test coverage
 ```bash
 unit_coverage(){
   echo "run unit tests"
@@ -35,6 +35,6 @@ unit_coverage(){
 }
 ```
 
-## Ссылки
-- [Описание пакета luatest](https://www.tarantool.io/ru/doc/latest/reference/reference_rock/luatest/luatest_overview/)
-- [Доклад на тему CI/CD для tarantool](https://youtu.be/heXXvlmADNA)
+## Links
+- [About luatest](https://www.tarantool.io/ru/doc/latest/reference/reference_rock/luatest/luatest_overview/)
+- [Video about CI/CD for tarantool](https://youtu.be/heXXvlmADNA)
